@@ -23,7 +23,7 @@ function init3D() {
     _renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     _renderer.toneMapping = THREE.ACESFilmicToneMapping;
     _renderer.toneMappingExposure = 1.1;
-    window._three3DRenderer = _renderer; window._three3DCamera = _camera;
+    window._three3DRenderer = _renderer; window._three3DCamera = _camera; window._three3DScene = _scene;
 
     // Lights
     _scene.add(new THREE.AmbientLight(0xfff3e0, 0.5));

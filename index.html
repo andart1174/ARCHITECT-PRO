@@ -9,6 +9,7 @@
     content="Professional interactive house construction planner with 2D editor, 3D model, materials calculator and cost estimator." />
   <link rel="stylesheet" href="style.css?v=2" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
@@ -90,7 +91,8 @@
       </div>
       <div class="header-actions">
         <button class="btn-sm" onclick="resetApp()">🔄 <span data-i18n="newProject">New Project</span></button>
-        <button class="btn-sm" onclick="window.print()">🖨️ <span data-i18n="exportPDF">Print</span></button>
+        <button class="btn-sm" onclick="exportToPrint()">🖨️ <span data-i18n="printProject">Print</span></button>
+        <button class="btn-sm" onclick="exportToPDF()">📄 <span data-i18n="exportPDF">Download PDF</span></button>
         <div class="lang-toggle">
           <button class="lang-btn active" id="app-lang-en" onclick="setLang('en')">🇬🇧 EN</button>
           <button class="lang-btn" id="app-lang-fr" onclick="setLang('fr')">🇫🇷 FR</button>
@@ -284,6 +286,7 @@
   <script src="data.js?v=2"></script>
   <script src="editor.js?v=2"></script>
   <script src="three-scene.js?v=2"></script>
+  <script src="export-handler.js?v=2"></script>
   <script src="app.js?v=2"></script>
 </body>
 
